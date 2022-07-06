@@ -128,7 +128,7 @@ a.red-border:hover::before {
 /*First section*/
 
 .first-section {
-    height: 800px;
+    height: 900px;
     width: 100%;
     background-image: url('../img/blur.jpg');
     background-repeat: no-repeat;
@@ -232,7 +232,8 @@ a:hover {
 
 .second-section {
     width: 100%;
-    background-color: black;
+    background-color: #000;
+    box-shadow: black 5px 5px 5px;
     max-height: 1500px;
 }
 
@@ -304,8 +305,9 @@ a:hover {
 
 .figText {
     color: #fff;
-    font-size: 18px;
+    font-size: 1vw;
     font-family: monumentExtended-regular;
+    text-align: center;
 }
 
 .box2 {
@@ -349,6 +351,7 @@ h1 {
     width: 100%;
     height: 292px;
     position: relative;
+    margin-bottom: -2px;
 }
 
 /*Fourth section*/
@@ -425,8 +428,21 @@ h1 {
 
 }
 
-.bottomBtn a {
+.bottomBtn button {
+    border: transparent;
+}
+
+/* .bottomBtn a {
     color: #fff;
+} */
+
+.scroll-top {
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    position: absolute;
+    
 }
 
 .bottomBtn button {
@@ -546,6 +562,7 @@ h1 {
     font-size: 18px;
     margin-top: 20px;
     width: 100%;
+    border: transparent;
 
 }
 
@@ -581,6 +598,7 @@ input{
     text-align: center;
     color: #fff;
     padding: 20px;
+    margin-bottom: -2px;
   
 }
 
@@ -682,6 +700,30 @@ button:hover{
     }
 }
 
+@keyframes anim-flipX {
+    0% {
+      opacity: 0;
+      transform: rotateX(90def);
+    }
+    50% {
+      opacity: 1;
+      transform: rotateX(720deg);
+    }
+    100% {
+      /* animate nothing to pause animation at the end */
+      opacity: 1;
+      transform: rotateX(720deg);
+    }
+}
+
+.about a:hover {
+    animation: 1s anim-flipX infinite;
+}
+
+.lok-text a:hover {
+    animation: 1s anim-flipX infinite;
+}
+
 
 /*Media query*/
 
@@ -740,6 +782,14 @@ button:hover{
     .bottom-text p {
         font-size:25px;
     }
+}
+
+@media (max-width:991px) {
+    .galerija-lokacije img {
+        width: 100%;
+        padding: 5% 0;
+    }
+    
 }
 
 @media (max-width:897px) {
@@ -803,7 +853,7 @@ button:hover{
         top: 70px;
         gap: 0;
         flex-direction: column;
-        background-color: rgb(169, 164, 164);
+        background-color: #000000bd;
         width: 100%;
         text-align: center;
         transition: 0.3s;
@@ -819,6 +869,9 @@ button:hover{
 @media (max-width:690px) {
     .overlay-bottom {
         height:100px ;
+    }
+    .lok-text a {
+        font-size: 14px;
     }
     
 }
@@ -918,7 +971,7 @@ button:hover{
         top: 70px;
         gap: 0;
         flex-direction: column;
-        background-color: rgb(169, 164, 164);
+        background-color: #000000bd;
         width: 100%;
         text-align: center;
         transition: 0.3s;
